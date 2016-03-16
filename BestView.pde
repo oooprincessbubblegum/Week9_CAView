@@ -28,13 +28,14 @@ class BestView extends CAView {
   }
   
   // Returns color of CA cell
-  color generateColoredCell(float posX, float posY, float size){
+  void generateColoredCell(int posX, int posY, int size){
     noStroke();
-    red = map(posX, width/2, width, 0, 255);
-    blue = map(posX, width/2, 0, 0, 255);
-    green = map(posY, 0, height, 0, 255);
-    ellipse(i*CELL_WIDTH, model.getGeneration()*CELL_WIDTH, CELL_WIDTH, CELL_WIDTH);
-    return 0; 
+    red = int(map(posX, width/2, width, 0, 255));
+    blue = int(map(posX, width/2, 0, 0, 255));
+    green = int(map(posY, 0, height, 0, 255));
+    colorMode(RGB,100);
+    fill(red,green,blue);
+    ellipse(posX, posY, size, size);
   }
   
   // Displays the model CA as simple square cells.
