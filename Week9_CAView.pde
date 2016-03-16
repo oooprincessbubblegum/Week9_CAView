@@ -40,13 +40,13 @@ void setup() {
   size(800, 200);
   frameRate(30);
   
-  // Initialize CA
+ // Initialize CA
   ca = new CA(INITIAL_RULESET, width/CELL_WIDTH);                 
   
   // Create available views.
   views = new ArrayList<CAView>();
-  views.add(new SquareCAView(ca));
-  views.add(new SquareCAView(ca, #ff0000, #00ffff));
+  views.add(new BestView(ca));
+  views.add(new BestView(ca, #ffffff));
 
   // Set current view.  
   currentViewId = 0;

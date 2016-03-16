@@ -1,5 +1,5 @@
 // A concrete implementation of the CAView as simple 2-color squares.
-class SquareCAView extends CAView {
+/*class SquareCAView extends CAView {
   
   // The color to display when the state of a CA cell is "on".
   color onColor;
@@ -38,5 +38,4 @@ class SquareCAView extends CAView {
   boolean finished() {
     return (model.getGeneration() > height/CELL_WIDTH);
   }
-}
-
+}*/
